@@ -22,7 +22,7 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn1-
       - name: ls
         working-directory: ./src/frontend
-        run: ls && echo ${{ steps.yarn-cache.outputs.dir }}
+        run: echo ${{ steps.yarn-cache.outputs.dir }}
       - name: Yarn install
         working-directory: ./src/frontend
         run: yarn install
